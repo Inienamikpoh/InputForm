@@ -4,20 +4,23 @@
     padding: 0;
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
+
+
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 @media screen and (min-width: 340px){
 
+    .container{
+        height: 100vh;
+        width: 100vw;
+    }
     .image_background{
         position: relative;
     }
     .small_background{
-        height: 300px;
+        height: 260px;
         width: 100%;
     }
     .big_background{
@@ -25,29 +28,90 @@
     }
     .front_card img{
         position: absolute;
-        top: 160px;
+        top: 130px;
         left: 6%;
         z-index: 2;
         width: 300px;
     }
     .back_card img{
         position: absolute;
-        top: 60px;
+        top: 30px;
         right: 8%;
         z-index: 1;
         width: 300px;
     }
     .white_background{
+        flex: 1;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100%;
     }
     .info{
         display: flex;
-        flex: 1;
-        background-color: red;
-        height: 350px;
-        width: 360px;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 60px 0 0;
+        height: 360px;
+        width: 340px;
     }
+    .info p{
+        font-size: 11px;
+        color: #220A30;
+        font-weight: 500;
+    }
+    .info input{
+        font-size: 13px;
+        color: #220A30;
+        font-weight: 500;
+        padding-left: 10px;
+    }
+    .first input,
+    .second input,
+    .left input,
+    .middle input,
+    .right input {
+        height: 45px;
+        border: 1px solid rgb(226, 226, 226);
+    }
+    input :focus{
+        border-color: #220A30;
+    }
+    button{
+        height: 45px;
+        font-size: 14px;
+        font-weight: 500;
+        background-color: #220A30;
+        color: white;
+        border: none;
+        border-radius: 8px;
+    }
+    .first input,
+    .second input{
+        width: 100%;
+    }
+    .first p,
+    .second p{
+        margin-bottom: 5px;
+    }
+    .third{
+        display: flex;
+        justify-content: space-between;
+        width: 340px;
+    }
+    .left input{
+        width: 75px;
+    }
+    .middle input{
+        width: 75px;
+    }
+    .right input{
+        width: 170px;
+    }
+}
+
+@media screen and (min-width: 740px) {
+    .container{
+        display: flex;
+    }
+
 }
